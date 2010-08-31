@@ -1,0 +1,39 @@
+h1. Resque-monitor: Resque-web in node
+
+@resque-monitor@ is a lightweight monitor and admin interface for "resque":http://github.com/defunkt/resque written in "node.js":http://github.com/ry/node.  Resque monitor streams resque activity over socket.io, giving you a _really_ real-time view into the state of your resque workers.
+
+h2. Features
+
+* live-updating charts on throughput for each worker, job type, queue and worker host
+* viewing and live monitoring queues
+* viewing and live monitoring failed jobs
+* removing queues
+* removing jobs from queues
+* requeueing failed jobs individually
+* bulk requeueing jobs
+* searching the job queue
+
+h2. Installation
+
+@npm install resque-monitor@
+
+h2. Running resque-monitor
+
+npm installs a resque-monitor executable, so you should just be able to type @resque-monitor@ at your prompt.
+
+<pre><code>$ resque-monitor --help
+options:
+  --port      -p        what port resque-monitor should use.  default: 8888
+  --host      -h        what host resque-monitor should bind to.  default: localhost
+  --redis     -r        redis host:port:database:namespace.  defaults to localhost:6379:0:resque
+</code></pre>
+
+h2. Requirements
+
+@resque-monitor@ only works on webkit and gecko based browsers.
+
+h2. Possible additions
+
+* mobile formatted overview
+* editing existing jobs
+* queueing new jobs manually
